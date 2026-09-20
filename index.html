@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SkyLayer – Plan Your 3D Journey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts: Inter + Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <!-- Device frame for desktop -->
+  <div class="device-frame">
+    <div class="device-screen">
+      <div class="device-header">
+        <div class="device-camera"></div>
+      </div>
+      <div class="device-content">
+  <!-- App Container -->
+  <div class="app">
+    <!-- Cover Screen -->
+    <section id="cover" class="screen cover-screen active">
+      <div class="cover-background" aria-hidden="true"></div>
+      <div class="cover-content">
+        <div class="cover-intro">
+          <p class="cover-year">Colombo 2100</p>
+          <div class="cover-brand">
+            <span class="cover-wordmark"><strong>S  K  Y</strong><em> R  A</em></span>
+          </div>
+          <h1 class="cover-title">Your 3D Journey. Seamless.</h1>
+          <p class="cover-copy">Plan, manage and track journeys across Colombo’s multi-level city.</p>
+        </div>
+
+        <div class="cover-slogan">
+          <span>One City.</span>
+          <span>Three Layers.</span>
+          <span>Endless Possibilities.</span>
+        </div>
+
+        <div class="cover-actions">
+          <button id="getStartedBtn" class="cover-cta">
+            Get Started
+            <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-screen="home">
+        <i data-lucide="home"></i>
+        <span>Home</span>
+      </button>
+      <button class="nav-item" data-screen="map">
+        <i data-lucide="map"></i>
+        <span>Map</span>
+      </button>
+      <button class="nav-item" data-screen="saved">
+        <i data-lucide="bookmark"></i>
+        <span>Saved</span>
+      </button>
+      <button class="nav-item" data-screen="profile">
+        <i data-lucide="user"></i>
+        <span>Profile</span>
+      </button>
+    </nav>
+
+    <!-- SCREEN 1: HOME -->
+    <section id="home" class="screen">
+      <!-- Header -->
+      <header class="top-header">
+        <div class="logo-area">
+          <div class="logo-text">
+            <div class="app-name">SkyLayer</div>
+            <div class="tagline">Colombo 2100 · Air · Roof · Ground</div>
+          </div>
+        </div>
+        <div class="language-selector">
+          <span>EN</span>
+          <i data-lucide="chevron-down" size="16"></i>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-image" style="background-image: url('assets/colombo-future-city.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <h1 class="hero-title">Plan Your 3D Journey</h1>
+        <p class="hero-subtitle">Routes across rooftop shuttles, air taxis, buses, trains and elevators.</p>
+      </div>
+
+      <!-- Search Card -->
+      <div class="search-card">
+        <div class="input-group">
+          <label for="from">From</label>
+          <div class="input-field">
+            <i data-lucide="map-pin" class="icon-from"></i>
+            <input type="text" id="from" placeholder="Your location / Colombo Fort" />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="to">To</label>
+          <div class="input-field">
+            <i data-lucide="map-pin" class="icon-to"></i>
+            <input type="text" id="to" placeholder="NHSL / University / Airport" />
+          </div>
+        </div>
+
+        <button class="search-btn">
+          <i data-lucide="search"></i>
+          Search Routes
+        </button>
+      </div>
+
+      <!-- Transport Icon Row -->
+      <div class="transport-icons">
+        <i data-lucide="plane" title="Air"></i>
+        <i data-lucide="bus-front" title="Rooftop"></i>
+        <i data-lucide="train-front" title="Ground"></i>
+        <i data-lucide="arrow-up-down" title="Elevator"></i>
+        <i data-lucide="footprints" title="Walk"></i>
+      </div>
+
+      <!-- Travel Style -->
+      <div class="section">
+        <h2 class="section-title">Choose your travel style</h2>
+        <div class="travel-style">
+          <button class="style-card active" data-style="sky">
+            <i data-lucide="plane"></i>
+            <div class="style-text">
+              <div>Sky-first</div>
+              <div class="style-sub">rooftop + air</div>
+            </div>
+          </button>
+          <button class="style-card" data-style="mixed">
+            <i data-lucide="layers"></i>
+            <div class="style-text">
+              <div>Mixed</div>
+              <div class="style-sub">all layers</div>
+            </div>
+          </button>
+          <button class="style-card" data-style="ground">
+            <i data-lucide="bus-front"></i>
+            <div class="style-text">
+              <div>Ground-first</div>
+              <div class="style-sub">street level</div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Filters -->
+      <div class="section">
+        <h2 class="section-title">Quick filters</h2>
+        <div class="filters">
+          <button class="filter-chip">
+            <i data-lucide="accessibility"></i>
+            Step-free only
+          </button>
+          <button class="filter-chip">
+            <i data-lucide="sun"></i>
+            Most shaded
+          </button>
+          <button class="filter-chip">
+            <i data-lucide="arrow-right-left"></i>
+            Fewest transfers
+          </button>
+          <button class="filter-chip">
+            <i data-lucide="plane"></i>
+            No air travel
+          </button>
+        </div>
+      </div>
+
+      <!-- SkySense intelligence -->
+      <section class="skysense-card" aria-labelledby="skysense-title">
+        <div class="skysense-header">
+          <div class="skysense-title-wrap">
+            <span class="skysense-orb" aria-hidden="true"><i data-lucide="sparkles"></i></span>
+            <div>
+              <div class="skysense-eyebrow">SkySense AI</div>
+              <h2 id="skysense-title">Your route, before you ask</h2>
+            </div>
+          </div>
+          <span class="ai-live"><span></span>Live</span>
+        </div>
+
+        <div class="prediction-panel" aria-live="polite">
+          <div class="prediction-icon"><i data-lucide="brain-circuit"></i></div>
+          <div class="prediction-copy">
+            <strong id="predictionTitle">Leave in 12 min for the calmest sky route</strong>
+            <span id="predictionText">SkySense predicts lighter air traffic and a clear rooftop transfer.</span>
+          </div>
+          <button id="refreshPrediction" class="icon-action" type="button" aria-label="Refresh predictive route">
+            <i data-lucide="refresh-cw"></i>
+          </button>
+        </div>
+
+        <div class="smart-tools">
+          <button id="accessibilityPreference" class="smart-tool" type="button" aria-pressed="false">
+            <i data-lucide="accessibility"></i>
+            <span><small>Personal route mode</small><strong>Step-free priority</strong></span>
+            <i data-lucide="chevron-right"></i>
+          </button>
+          <button id="smartRebook" class="smart-tool" type="button">
+            <i data-lucide="calendar-clock"></i>
+            <span><small>Smart rebooking</small><strong id="rebookLabel">Protect this journey</strong></span>
+            <i data-lucide="arrow-up-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="comfort-card" aria-labelledby="comfort-title">
+        <div class="comfort-heading">
+          <div>
+            <span class="skysense-eyebrow">Travel comfort</span>
+            <h2 id="comfort-title">Make the journey easier</h2>
+          </div>
+          <i data-lucide="heart-handshake" aria-hidden="true"></i>
+        </div>
+        <p class="comfort-copy">Choose what helps you travel with confidence.</p>
+        <div class="comfort-options">
+          <button class="comfort-option" type="button" data-comfort="step-free" aria-pressed="false">
+            <i data-lucide="accessibility" aria-hidden="true"></i>
+            <span>Step-free</span>
+          </button>
+          <button class="comfort-option" type="button" data-comfort="large-text" aria-pressed="false">
+            <i data-lucide="type" aria-hidden="true"></i>
+            <span>Large text</span>
+          </button>
+          <button class="comfort-option" type="button" data-comfort="quiet" aria-pressed="false">
+            <i data-lucide="volume-x" aria-hidden="true"></i>
+            <span>Quiet routes</span>
+          </button>
+        </div>
+        <p id="comfortStatus" class="comfort-status" aria-live="polite">No preferences selected</p>
+      </section>
+
+      <!-- Quick Trips -->
+      <div class="section">
+        <h2 class="section-title">Quick trips</h2>
+        <p class="section-subtitle">Ready-made routes for common journeys.</p>
+        <div class="quick-trips">
+          <div class="trip-card">
+            <div class="trip-icon">
+              <i data-lucide="plane"></i>
+            </div>
+            <div class="trip-info">
+              <div class="trip-name">Fort → WTC</div>
+              <div class="trip-meta">28 min · 3 transfers</div>
+            </div>
+            <i data-lucide="chevron-right" class="trip-arrow"></i>
+          </div>
+
+          <div class="trip-card">
+            <div class="trip-icon">
+              <i data-lucide="train-front"></i>
+            </div>
+            <div class="trip-info">
+              <div class="trip-name">Bambalapitiya Station → Office Tower</div>
+              <div class="trip-meta">22 min · 2 transfers</div>
+            </div>
+            <i data-lucide="chevron-right" class="trip-arrow"></i>
+          </div>
+
+          <div class="trip-card">
+            <div class="trip-icon">
+              <i data-lucide="heart-pulse"></i>
+            </div>
+            <div class="trip-info">
+              <div class="trip-name">University of Colombo → NHSL</div>
+              <div class="trip-meta">18 min · 2 transfers</div>
+            </div>
+            <i data-lucide="chevron-right" class="trip-arrow"></i>
+          </div>
+
+          <div class="trip-card">
+            <div class="trip-icon">
+              <i data-lucide="plane"></i>
+            </div>
+            <div class="trip-info">
+              <div class="trip-name">Airport → Port City</div>
+              <div class="trip-meta">32 min · 3 transfers</div>
+            </div>
+            <i data-lucide="chevron-right" class="trip-arrow"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: ROUTE DETAILS -->
+    <section id="route" class="screen">
+      <header class="top-header">
+        <button class="back-btn" onclick="showScreen('home')">
+          <i data-lucide="arrow-left"></i>
+        </button>
+        <h1 class="screen-title">Your Sky-Level Route</h1>
+        <button class="info-btn">
+          <i data-lucide="info"></i>
+        </button>
+      </header>
+
+      <!-- Journey Summary -->
+      <div class="summary-card">
+        <div class="summary-row">
+          <div class="summary-item">
+            <i data-lucide="clock"></i>
+            <div>
+              <div class="summary-label">Total time</div>
+              <div class="summary-value">28 min</div>
+            </div>
+          </div>
+          <div class="summary-item">
+            <i data-lucide="arrow-right-left"></i>
+            <div>
+              <div class="summary-label">Transfers</div>
+              <div class="summary-value">3</div>
+            </div>
+          </div>
+          <div class="summary-item">
+            <i data-lucide="layers"></i>
+            <div>
+              <div class="summary-label">Layers</div>
+              <div class="summary-value">Ground → Sky → Air → Sky</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="badges">
+          <div class="badge success">
+            <i data-lucide="sun"></i>
+            80% shaded
+          </div>
+          <div class="badge success">
+            <i data-lucide="accessibility"></i>
+            Step-free
+          </div>
+          <div class="badge info">
+            <i data-lucide="users"></i>
+            Low crowding
+          </div>
+        </div>
+      </div>
+
+      <!-- AI route comparison -->
+      <section class="route-options-card" aria-labelledby="route-options-title">
+        <div class="route-options-header">
+          <div>
+            <span class="skysense-eyebrow">SkySense comparison</span>
+            <h2 id="route-options-title">Choose what matters today</h2>
+          </div>
+          <i data-lucide="sliders-horizontal" aria-hidden="true"></i>
+        </div>
+        <div class="route-options" role="list" aria-label="Route options">
+          <button class="route-option is-selected" type="button" data-route="calm" aria-pressed="true">
+            <span class="route-option-icon"><i data-lucide="sparkles"></i></span>
+            <span class="route-option-copy"><strong>Calmest</strong><small>28 min · 3 changes</small></span>
+            <span class="route-option-badge">AI pick</span>
+          </button>
+          <button class="route-option" type="button" data-route="accessible" aria-pressed="false">
+            <span class="route-option-icon"><i data-lucide="accessibility"></i></span>
+            <span class="route-option-copy"><strong>Most accessible</strong><small>31 min · step-free</small></span>
+            <span class="route-option-badge">+3 min</span>
+          </button>
+          <button class="route-option" type="button" data-route="walk" aria-pressed="false">
+            <span class="route-option-icon"><i data-lucide="footprints"></i></span>
+            <span class="route-option-copy"><strong>Least walking</strong><small>30 min · 180 m walk</small></span>
+            <span class="route-option-badge">-240 m</span>
+          </button>
+        </div>
+        <div class="route-explanation" aria-live="polite">
+          <i data-lucide="brain-circuit"></i>
+          <p id="routeExplanation">AI pick: the calmest route today, based on predicted air traffic and elevator wait times.</p>
+        </div>
+      </section>
+
+      <!-- Route Timeline -->
+      <div class="timeline">
+        <!-- Walk -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i data-lucide="footprints"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-title">Walk – 3 min</div>
+            <div class="timeline-desc">Walk from Colombo Fort entrance to Elevator A</div>
+            <div class="timeline-sub">Level G → Roof Level 12</div>
+          </div>
+        </div>
+
+        <!-- Elevator -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i data-lucide="arrow-up-down"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-title">Elevator – 1 min wait, 2 min ride</div>
+            <div class="timeline-desc">Elevator A to Roof Level 12</div>
+            <div class="timeline-status success">
+              <i data-lucide="check-circle"></i>
+              Arriving in 1 min
+            </div>
+            <div class="timeline-badge success">
+              <i data-lucide="accessibility"></i>
+              Step-free, wheelchair accessible
+            </div>
+          </div>
+        </div>
+
+        <!-- Rooftop Shuttle -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i data-lucide="bus-front"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-title">Rooftop shuttle – 6 min</div>
+            <div class="timeline-desc">Rooftop Shuttle R12: Fort Roof → WTC Rooftop</div>
+            <div class="timeline-sub">Roof Level 12 → Roof Level 20</div>
+            <div class="timeline-status success">
+              <i data-lucide="check-circle"></i>
+              On time
+            </div>
+            <div class="timeline-badge success">
+              <i data-lucide="sun"></i>
+              Fully covered route
+            </div>
+          </div>
+        </div>
+
+        <!-- Air Taxi -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i data-lucide="plane"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-title">Air taxi – 5 min</div>
+            <div class="timeline-desc">SkyLane Air Taxi: WTC → NHSL</div>
+            <div class="timeline-sub">Roof Level 20 → Roof Level 18</div>
+            <div class="timeline-status success">
+              <i data-lucide="check-circle"></i>
+              Landing in 6 min
+            </div>
+            <div class="timeline-badge warning">
+              <i data-lucide="triangle-alert"></i>
+              Light wind – slight turbulence possible
+            </div>
+          </div>
+        </div>
+
+        <!-- Bus -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i data-lucide="bus-front"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-title">Bus – 7 min</div>
+            <div class="timeline-desc">Bus 138: NHSL Rooftop → Ground Terminal</div>
+            <div class="timeline-sub">Roof Level 18 → Ground</div>
+            <div class="timeline-status success">
+              <i data-lucide="check-circle"></i>
+              Bus waiting at bay 3
+            </div>
+          </div>
+        </div>
+
+        <!-- Final Walk -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i data-lucide="footprints"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-title">Walk – 4 min</div>
+            <div class="timeline-desc">Walk to NHSL Main Entrance</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alternative Route -->
+      <div class="alternative-card">
+        <div class="alt-header">
+          <i data-lucide="refresh-ccw"></i>
+          Alternative route
+        </div>
+        <div class="alt-info">32 min · 2 transfers · all ground · 60% shaded</div>
+        <button class="alt-btn">View alternative</button>
+      </div>
+
+      <!-- Bottom Actions -->
+      <div class="bottom-actions">
+        <button class="btn-primary">
+          <i data-lucide="play"></i>
+          Start Journey
+        </button>
+        <button class="btn-secondary">
+          <i data-lucide="heart"></i>
+          Save route
+        </button>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: LIVE TRACKING -->
+    <section id="map" class="screen">
+      <header class="top-header">
+        <button class="back-btn" onclick="showScreen('home')">
+          <i data-lucide="arrow-left"></i>
+        </button>
+        <h1 class="screen-title">Track Your Journey</h1>
+        <div class="view-toggle">
+          <button class="toggle-btn">2D</button>
+          <button class="toggle-btn active">3D</button>
+        </div>
+      </header>
+
+      <!-- 3D Map Area -->
+      <div class="map-area">
+        <div class="map-image" style="background-image: url('assets/colombo-3d-map.jpg');"></div>
+        <!-- You can overlay SVG routes if you want; for prototype, image is enough -->
+      </div>
+
+      <!-- Live Status Card -->
+      <div class="live-card">
+        <div class="live-header">
+          <i data-lucide="arrow-up-down"></i>
+          Next: Elevator A to Roof Level 12
+        </div>
+        <div class="live-status">Arriving in 1 min</div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 70%;"></div>
+        </div>
+        <div class="live-info">
+          <div class="info-row">
+            <i data-lucide="map-pin"></i>
+            You are 200 m from WTC rooftop.
+          </div>
+          <div class="info-row">
+            <i data-lucide="git-branch"></i>
+            Sky-bridge ahead – stay right.
+          </div>
+          <div class="info-row">
+            <i data-lucide="wind"></i>
+            Air corridor clear – light wind.
+          </div>
+        </div>
+        <button class="help-btn">
+          <i data-lucide="headphones"></i>
+          Help
+        </button>
+      </div>
+
+      <!-- Map Legend -->
+      <div class="legend-card">
+        <div class="legend-header">
+          <i data-lucide="map"></i>
+          Map legend
+        </div>
+        <div class="legend-items">
+          <div class="legend-item">
+            <i data-lucide="plane"></i>
+            Air taxi
+          </div>
+          <div class="legend-item">
+            <i data-lucide="bus-front"></i>
+            Rooftop shuttle
+          </div>
+          <div class="legend-item">
+            <i data-lucide="git-branch"></i>
+            Sky-bridge
+          </div>
+          <div class="legend-item">
+            <i data-lucide="arrow-up-down"></i>
+            Elevator
+          </div>
+          <div class="legend-item">
+            <i data-lucide="bus-front"></i>
+            Bus
+          </div>
+          <div class="legend-item">
+            <i data-lucide="train-front"></i>
+            Train
+          </div>
+        </div>
+        <div class="layer-legend">
+          <div class="layer-item">
+            <span class="layer-color sky"></span>
+            Sky layer (rooftop + air)
+          </div>
+          <div class="layer-item">
+            <span class="layer-color ground"></span>
+            Ground layer
+          </div>
+        </div>
+      </div>
+
+      <!-- Voice Guidance -->
+      <div class="voice-card">
+        <div class="voice-header">
+          <i data-lucide="volume-2"></i>
+          Voice guidance
+          <span class="voice-status">ON</span>
+        </div>
+        <div class="voice-message">
+          You are approaching a sky-bridge. Continue straight.
+        </div>
+      </div>
+
+      <!-- AR Indoor Preview -->
+      <div class="ar-card">
+        <div class="ar-header">
+          <i data-lucide="scan"></i>
+          AR indoor preview
+        </div>
+        <div class="ar-image" style="background-image: url('assets/ar-indoor-navigation.png');"></div>
+        <div class="ar-text">Will start at lobby</div>
+      </div>
+    </section>
+
+    <!-- Placeholder screens for Saved & Profile (optional) -->
+    <section id="saved" class="screen">
+      <header class="top-header">
+        <h1 class="screen-title">Saved Routes</h1>
+      </header>
+      <div class="empty-state" id="savedEmptyState">
+        <i data-lucide="bookmark"></i>
+        <p>No saved routes yet.</p>
+      </div>
+      <div class="saved-route-card is-hidden" id="savedRouteCard">
+        <div class="saved-route-icon"><i data-lucide="route"></i></div>
+        <div class="saved-route-info">
+          <strong>Fort → WTC</strong>
+          <span>28 min · 3 transfers · Sky-first</span>
+        </div>
+        <button id="resumeSavedRoute" class="icon-action" type="button" aria-label="Resume saved route">
+          <i data-lucide="arrow-right"></i>
+        </button>
+        <button id="removeSavedRoute" class="icon-action" type="button" aria-label="Remove saved route">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+    </section>
+
+    <section id="profile" class="screen">
+      <header class="top-header">
+        <h1 class="screen-title">Profile</h1>
+      </header>
+
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="profile-avatar">S</div>
+          <div>
+            <div class="profile-name">Sarah N.</div>
+            <div class="profile-subtitle">Mobility preferences</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-settings">
+        <div class="settings-header">
+          <i data-lucide="accessibility"></i>
+          <span>Accessibility</span>
+        </div>
+
+        <button class="accessibility-toggle" type="button" data-access="large-text" aria-pressed="false">
+          <i data-lucide="type"></i>
+          <span>Large text</span>
+        </button>
+
+        <button class="accessibility-toggle" type="button" data-access="high-contrast" aria-pressed="false">
+          <i data-lucide="contrast"></i>
+          <span>High contrast</span>
+        </button>
+
+        <button class="accessibility-toggle" type="button" data-access="quiet-mode" aria-pressed="false">
+          <i data-lucide="volume-x"></i>
+          <span>Quiet route</span>
+        </button>
+      </div>
+
+      <button id="profileHelpBtn" class="profile-help-btn" type="button">
+        <i data-lucide="headphones"></i>
+        Call assistance
+      </button>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
