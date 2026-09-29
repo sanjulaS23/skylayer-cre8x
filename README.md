@@ -106,13 +106,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser (best viewed
 
 **Next steps:** pilot on a small corridor (e.g. Fort–WTC–NHSL) with simulated data, integrate real-time APIs, and expand language support (Sinhala, Tamil, English).
 
-## Team
-
-<!-- Fill in -->
-- **[Name 1]** – Role (e.g. UX/UI)
-- **[Name 2]** – Role (e.g. Frontend)
-- **[Name 3]** – Role (e.g. Research)
-
 **University:** General Sir John Kotelawala Defence University (KDU) — BCS Student Chapter
 
 ---
