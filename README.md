@@ -5,7 +5,7 @@
 Submitted for **Cre8x 3.0 – Round 01: The Oracle Challenge** (Topic: *Transportation 2100*)
 Organized by the **KDU BCS Student Chapter**, General Sir John Kotelawala Defence University.
 
-🔗 **Live app:** [your-sky-layer-app.vercel.app](https://your-sky-layer-app.vercel.app) <!-- replace with your actual deployed link -->
+🔗 **Live app:** [your-sky-layer-app.vercel.app]( https://skylayer-cre8x-8uvx.vercel.app/) <!-- replace with your actual deployed link -->
 
 ---
 
