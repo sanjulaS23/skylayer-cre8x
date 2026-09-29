@@ -96,7 +96,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser (best viewed
 
 | Home | Route Details | Live Map |
 |---|---|---|
-| ![Home](./screenshots/home.png) | ![Route Details](./screenshots/route-details.png) | ![Live Map](./screenshots/live-map.png) |
+| ![Home](Home.png) | ![Route Details](Route_Details.png) | ![Live Map](Live_Map.png) |
 
 ## Impact & Future Work
 
