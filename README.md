@@ -94,10 +94,9 @@ Open [http://localhost:3000](http://localhost:3000) in your browser (best viewed
 
 ## Screenshots
 
-| Home | Route Details | Live Map |
-|---|---|---|
-| ![Home](Home.png) | ![Route Details](route_details.png) | ![Live Map](Live_Map.png) |
-
+| Home | 
+|---|
+| ![Home](Home.png) | 
 ## Impact & Future Work
 
 - Reduces heat exposure and congestion for daily commuters by using rooftop and air layers
